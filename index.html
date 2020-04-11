@@ -1,20 +1,35 @@
-<!DOCTYPE html>
 <html>
 <body>
 
-<h2>JavaScript Variables</h2>
+<h2>Egg Hunt 2020</h2>
 
-<p>Eastyer Egg Hunt! In this example, x, y, and z are variables.</p>
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
 
 <p id="demo"></p>
 
 <script>
-var x = 5;
-var y = 6;
-var z = x + y;
-document.getElementById("demo").innerHTML =
-"The value of z is: " + z;
+function myFunction() {
+  var x, text, answer;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("numb").value;
+
+  answer = "surprise";
+
+  // If x is Not a Number or less than one or greater than 10
+  if (x == answer) {
+    text = "Correct! The next clue is...";
+  } else {
+    text = "Wrong. try again.";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
 </script>
 
+
 </body>
-</html>
+</html> 
